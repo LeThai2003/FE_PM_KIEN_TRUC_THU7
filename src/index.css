@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Poppins", "sans-serif";
+  --breakpoint-3xl: 1920px;
+  --color-primary: #875cf5;
+}
+
+p, h1, h2, h3, h4, h5, h6, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+@layer{
+  html {
+    font-family: var(--font-display);
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    @apply bg-white dark:bg-dark-bg overflow-x-hidden;
+  }
+}
+
+.input-box{
+  @apply w-full px-4 py-3 outline-none rounded-lg dark:bg-dark-tertiary dark:text-white text-gray-900 flex justify-between gap-3 text-sm mt-1 border border-gray-100 dark:border-gray-600
+}
+
+.btn-primary{
+  @apply w-full px-4 py-2 cursor-pointer bg-violet-500 hover:bg-purple-600 uppercase rounded-lg flex items-center justify-center text-white font-medium my-3
+}
+
+.btn-icon{
+  @apply w-[45px] h-[40px] hover:bg-blue-50 hover:text-blue-500 rounded-md flex items-center justify-center dark:text-gray-100 text-xl dark:hover:bg-slate-700 dark:hover:text-white
+}
+
+
+@layer utilities {
+  /* Thanh cuộn chung */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background:transparent;
+  }
+
+  .dark .custom-scrollbar::-webkit-scrollbar-track {
+    background:#33383e;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #d1d5db; /* Mặc định - màu xám */
+    border-radius: 6px;
+  }
+
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #38475b; /* Màu thumb trong dark mode */
+  }
+}
+
+
+/* collapse */
+.dark .ant-collapse{
+  background-color: #393c40;
+  border-color: #3f4856;
+}
+
+.dark .ant-collapse .ant-collapse-header, .ant-collapse-header{
+  color: white;
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+}
+
+.ant-collapse-expand-icon{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .ant-collapse-content{
+  background-color: #505050;
+  border-top-color: #4b5563;
+}
+
+.dark .MuiTablePagination-actions button{
+  color: #a3a3a3;
+}
+
+/* table */
+.dark .css-ltf0zy-MuiDataGrid-iconButtonContainer button {
+  color: #fff;
+}
+
+.dark .css-1re5frt-MuiDataGrid-root .MuiDataGrid-menuIcon button {
+  color: #a3a3a3;
+}
+
+
+/* TIMELINE STYLING */
+.timeline ._3_ygE {
+  @apply rounded-tl-md border border-r-0 border-[#e6e4e4] dark:border-stroke-dark;
+}
+.timeline ._2eZzQ {
+  @apply border-[#e6e4e4] dark:border-stroke-dark;
+}
+.timeline ._2dZTy {
+  @apply fill-white dark:fill-dark-secondary;
+}
+.timeline ._2dZTy:nth-child(even) {
+  @apply fill-[#f5f5f5] dark:fill-dark-tertiary;
+}
+.timeline ._35nLX {
+  @apply fill-white stroke-[#e6e4e4] dark:fill-dark-secondary dark:stroke-stroke-dark;
+}
+.timeline ._9w8d5 {
+  @apply fill-[#333] dark:fill-white;
+}
+.timeline ._34SS0 {
+  @apply bg-white dark:bg-dark-secondary;
+}
+.timeline ._34SS0:nth-of-type(even) {
+  @apply bg-[#f5f5f5] dark:bg-dark-tertiary;
+}
+.timeline ._RuwuK,
+.timeline ._3rUKi,
+.timeline ._1rLuZ {
+  @apply stroke-[#e6e4e4] dark:stroke-stroke-dark;
+}
+.timeline ._3ZbQT {
+  @apply border-l-0 border-[#e6e4e4] dark:border-stroke-dark;
+}
+.timeline ._3T42e {
+  @apply bg-white dark:bg-dark-bg;
+}
+.timeline ._29NTg {
+  @apply dark:text-neutral-500;
+}
+
+
+.dark ._2k9Ys::-webkit-scrollbar-track{
+  background:#33383e;
+}
+.dark ._2k9Ys::-webkit-scrollbar-thumb{
+  background-color: #d1d5db; /* Mặc định - màu xám */
+  border-radius: 6px;
+}
+.dark ._2k9Ys::-webkit-scrollbar-thumb{
+  background-color: #38475b;
+}
+._2k9Ys{
+  scrollbar-width: auto;
+}
+
+/* ::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+} */
