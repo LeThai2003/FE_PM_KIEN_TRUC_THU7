@@ -11,7 +11,9 @@ import axiosInstance from '../../utils/axiosInstance';
 import { API_PATHS } from '../../utils/apiPath';
 import { useDispatch, useSelector } from 'react-redux';
 import { getNameInitials } from '../../utils/helper';
-import {updateStatus} from "../../redux/tasks/taskSlice.js"
+import {updateStatus} from "../../redux/tasks/taskSlice.js";
+import toast from 'react-hot-toast';
+
 
 
 const ViewBoardProject = ({setIsModalNewTaskOpen, data}) => {
@@ -24,9 +26,11 @@ const ViewBoardProject = ({setIsModalNewTaskOpen, data}) => {
       const response = await axiosInstance.patch(API_PATHS.TASK.UPDATE_STATUS, {taskId, toStatus});
       // console.log(response.data);
       dispatch(updateStatus(response.data.task));
+      toast.success("Update task successfully");
       // getDataTasks();
     } catch (error) {
       console.log(error);
+      toast.error("Unauthorized to remove task");
     }
   }
 

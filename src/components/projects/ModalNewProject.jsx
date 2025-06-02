@@ -5,6 +5,7 @@ import axiosInstance from '../../utils/axiosInstance';
 import { API_PATHS } from '../../utils/apiPath';
 import { useDispatch } from 'react-redux';
 import { addProject, updateProject } from '../../redux/projects/projectSlice';
+import toast from 'react-hot-toast';
 
 const ModalNewProject = ({isOpen, onClose, type, data}) => {
 
@@ -61,8 +62,10 @@ const ModalNewProject = ({isOpen, onClose, type, data}) => {
         closeModalAndClearFields();
         console.log(response.data);
         dispatch(updateProject(response.data.project));
+        toast.success("Updated project successfully");
       } catch (error) {
         console.log(error);
+        toast.error("Updated project fail");
       }
     }
     else
@@ -73,8 +76,10 @@ const ModalNewProject = ({isOpen, onClose, type, data}) => {
         });
         closeModalAndClearFields();
         dispatch(addProject(response.data.project));
+        toast.success("Create a new project successfully");
       } catch (error) {
         console.log(error);
+        toast.error("Updated project fail");
       }
     }
   } 

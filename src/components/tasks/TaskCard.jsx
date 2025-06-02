@@ -4,6 +4,7 @@ import PriorityTag from './PriorityTag';
 import { StatusTag } from '../../pages/Task/TaskDetail';
 import { FaRegEye } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import { getNameInitials } from '../../utils/helper';
 
 const TaskCard = ({task}) => {
 

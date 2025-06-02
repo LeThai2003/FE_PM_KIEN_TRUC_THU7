@@ -14,6 +14,7 @@ import Account from "./pages/account/Account"
 import Search from "./pages/search/Search"
 import Priority from "./pages/priority/Priority"
 import Timeline from "./pages/timeline/Timeline"
+import {Toaster} from "react-hot-toast";
 
 
 function App() {
@@ -46,6 +47,15 @@ function App() {
           
         </Routes>
       </BrowserRouter>
+
+      <Toaster
+        toastOptions={{
+          className:"",
+          style:{
+            fontSize: "13px"
+          }
+        }}
+      />
     </>
   )
 }

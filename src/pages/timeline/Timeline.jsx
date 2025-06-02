@@ -84,8 +84,8 @@ const Timeline = () => {
             {...displayOptions}
             columnWidth={displayOptions.viewMode === ViewMode.Month ? 150 : 100}
             listCellWidth='150px'
-            barBackgroundColor={isDarkMode ? "#101214" : "#aeb8c2"}     
-            barBackgroundSelectedColor={isDarkMode ? "#000" : "#9ba1a6"}     
+            // barBackgroundColor={isDarkMode ? "#101214" : "#aeb8c2"}     
+            // barBackgroundSelectedColor={isDarkMode ? "#000" : "#9ba1a6"}     
           />
         </div>
       </div>

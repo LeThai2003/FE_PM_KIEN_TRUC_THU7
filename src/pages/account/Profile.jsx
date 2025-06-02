@@ -12,6 +12,7 @@ import { API_PATHS } from '../../utils/apiPath';
 import { signInSuccess } from '../../redux/users/userSlice';
 import {uploadSingleImage} from "../../utils/uploads/uploadImage"
 import { validateEmail } from '../../utils/helper';
+import toast from 'react-hot-toast';
 
 const Profile = () => {
 
@@ -82,11 +83,14 @@ const Profile = () => {
 
       dispatch(signInSuccess(response.data.user));
 
+      toast.success("Update profile successfully");
+
       console.log(response.data);
 
       setIsLoading(false);
     } catch (error) {
       console.log(error);
+      toast.error("Update profile fail");
       setIsLoading(false);
     }
   }

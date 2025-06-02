@@ -10,6 +10,7 @@ import axiosInstance from '../../utils/axiosInstance';
 import { API_PATHS } from '../../utils/apiPath';
 import { useDispatch } from 'react-redux';
 import { removeTask } from '../../redux/tasks/taskSlice';
+import toast from 'react-hot-toast';
 
 const Dropdown = ({userId, data}) => {
 
@@ -20,10 +21,12 @@ const Dropdown = ({userId, data}) => {
 
   const handleDelete = async () => {
     try {
-      const response = await axiosInstance.delete(API_PATHS.TASK.DELETE_TASK(data._id));
+      await axiosInstance.delete(API_PATHS.TASK.DELETE_TASK(data._id));
       dispatch(removeTask(data._id));
+      toast.success("Deleted task successfully");
     } catch (error) {
       console.log(error);
+      toast.error("Deleted task fail");
     }
     setIsOpenDeleteAlert(false);
   }

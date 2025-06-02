@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addTask, updateTask } from '../../redux/tasks/taskSlice';
 import { CiImageOn } from "react-icons/ci";
 import { uploadSingleImage } from '../../utils/uploads/uploadImage';
+import toast from 'react-hot-toast';
 
 
 const ModalNewTask = ({isOpen, onClose, type, data, projectId}) => {
@@ -108,13 +109,14 @@ const ModalNewTask = ({isOpen, onClose, type, data, projectId}) => {
 
         const response = await axiosInstance.post(API_PATHS.TASK.CREATE, dataObject);
 
-        console.log(response.data);
+        // console.log(response.data);
         closeModalNewAndEditTask();
         dispatch(addTask(response.data.task));
-
+        toast.success("Create a new task successfully");
       } catch (error) {
         console.log(error);
         setIsLoading(false);
+        toast.error("Create a new task fail");
       }
     }
     else
@@ -141,9 +143,11 @@ const ModalNewTask = ({isOpen, onClose, type, data, projectId}) => {
         });
         closeModalNewAndEditTask();
         dispatch(updateTask(response.data.task));
+        toast.success("Updated task successfully");
       } catch (error) {
         console.log(error);
         setIsLoading(false);
+        toast.error("Updated task fail");
       }
     }
   }

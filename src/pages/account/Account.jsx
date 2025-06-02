@@ -12,6 +12,7 @@ import { API_PATHS } from '../../utils/apiPath';
 import { signInSuccess } from '../../redux/users/userSlice';
 import {uploadSingleImage} from "../../utils/uploads/uploadImage"
 import { validateEmail } from '../../utils/helper';
+import toast from 'react-hot-toast';
 
 const Account = () => {
 
@@ -58,12 +59,14 @@ const Account = () => {
       });
 
       console.log(response.data);
+      toast.success("Update password successfully");
       handleCancle();
       setIsDisable(true);
       setIsLoading(false);
     } catch (error) {
       console.log(error);
       setError(error.response.data.message);
+      toast.error(error.response.data.message)
       setIsLoading(false);
     }
   }
