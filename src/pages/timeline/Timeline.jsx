@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import {Gantt, ViewMode} from "gantt-task-react"
 import "gantt-task-react/dist/index.css"
 import { useSelector } from 'react-redux'
-import HomeLayout from '../../components/Layouts/HomeLayout'
+import HomeLayout from '../../components/layouts/HomeLayout'
 import axiosInstance from '../../utils/axiosInstance'
 import { API_PATHS } from '../../utils/apiPath'
 

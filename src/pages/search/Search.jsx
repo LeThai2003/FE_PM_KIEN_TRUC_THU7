@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect } from 'react'
-import HomeLayout from '../../components/Layouts/HomeLayout'
+import HomeLayout from '../../components/layouts/HomeLayout'
 import { useState } from 'react';
 import { IoSearchOutline } from 'react-icons/io5';
 import { debounce } from 'lodash';

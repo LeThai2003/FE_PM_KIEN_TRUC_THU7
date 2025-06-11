@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import Navbar from '../../components/navbar/Navbar'
 import { useNavigate } from 'react-router-dom'
 import { IoIosArrowBack } from 'react-icons/io';
-import HomeLayout from '../../components/Layouts/HomeLayout';
+import HomeLayout from '../../components/layouts/HomeLayout';
 import PictureSelect from '../../components/inputs/PictureSelect';
 import {LuUser} from "react-icons/lu";
 import Input from '../../components/inputs/Input';

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import HomeLayout from '../../components/Layouts/HomeLayout';
+import HomeLayout from '../../components/layouts/HomeLayout';
 import { useEffect } from 'react';
 import axiosInstance from '../../utils/axiosInstance';
 import { API_PATHS } from '../../utils/apiPath';

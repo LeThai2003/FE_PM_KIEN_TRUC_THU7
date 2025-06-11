@@ -5,8 +5,6 @@ import { validateEmail } from '../../utils/helper';
 import Input from '../../components/inputs/Input';
 import axiosInstance from '../../utils/axiosInstance';
 import { API_PATHS } from '../../utils/apiPath';
-import { uploadSingleImage } from '../../utils/uploads/uploadImage';
-import { useDispatch, useSelector } from 'react-redux';
 import { isLogin } from '../../utils/isLogin';
 
 

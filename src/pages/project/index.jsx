@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import HomeLayout from '../../components/Layouts/HomeLayout'
+import HomeLayout from '../../components/layouts/HomeLayout'
 import ProjectHeader from '../../components/projects/ProjectHeader';
 import ViewBoardProject from './Board';
 import ModalNewTask from '../../components/tasks/ModalNewTask';

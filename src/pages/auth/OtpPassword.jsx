@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useNavigate, useParams, useLocation } from 'react-router-dom';
-import { validateOTP } from '../../utils/helper';
 import { IoIosArrowBack, IoMdArrowBack } from "react-icons/io";
 import CoundownTime from '../../components/CoundownTime/CoundownTime';
 import Input from '../../components/inputs/Input';

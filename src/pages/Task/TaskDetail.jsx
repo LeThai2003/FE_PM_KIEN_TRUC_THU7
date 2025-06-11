@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import HomeLayout from '../../components/Layouts/HomeLayout'
+import HomeLayout from '../../components/layouts/HomeLayout'
 import { useNavigate, useParams } from 'react-router-dom'
 import { IoIosArrowBack } from "react-icons/io";
 import PriorityTag from '../../components/tasks/PriorityTag';

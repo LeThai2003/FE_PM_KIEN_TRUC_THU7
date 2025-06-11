@@ -1,17 +1,11 @@
 import React, { useState } from 'react'
-import Navbar from '../../components/navbar/Navbar'
 import { useNavigate } from 'react-router-dom'
 import { IoIosArrowBack } from 'react-icons/io';
-import HomeLayout from '../../components/Layouts/HomeLayout';
-import PictureSelect from '../../components/inputs/PictureSelect';
-import {LuUser} from "react-icons/lu";
+import HomeLayout from '../../components/layouts/HomeLayout';
 import Input from '../../components/inputs/Input';
 import { useDispatch, useSelector } from 'react-redux';
 import axiosInstance from '../../utils/axiosInstance';
 import { API_PATHS } from '../../utils/apiPath';
-import { signInSuccess } from '../../redux/users/userSlice';
-import {uploadSingleImage} from "../../utils/uploads/uploadImage"
-import { validateEmail } from '../../utils/helper';
 import toast from 'react-hot-toast';
 
 const Account = () => {

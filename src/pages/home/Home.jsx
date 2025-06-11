@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import HomeLayout from '../../components/Layouts/HomeLayout'
+import HomeLayout from '../../components/layouts/HomeLayout'
 import { useState } from 'react';
 import Header from '../../components/projects/Header';
 import { FaRegPlusSquare } from 'react-icons/fa';
@@ -12,8 +12,6 @@ import ColumnBasic from '../../components/charts/ColumnBasic';
 import PieBasic from '../../components/charts/PieBasic';
 import HomeProjectTable from '../../components/tables/HomeProjectTable';
 import ChartBoxHeader from '../../components/charts/ChartBoxHeader';
-import { Button } from 'antd';
-import { socket } from '../../utils/socket/socket';
 
 const Home = () => {
   const [modalNewProjectOpen, setModalNewProjectOpen] = useState(false);

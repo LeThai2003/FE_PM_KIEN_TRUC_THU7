@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
-import { validateOTP } from '../../utils/helper';
 import { IoIosArrowBack, IoMdArrowBack } from "react-icons/io";
 import Input from '../../components/inputs/Input';
 import axiosInstance from '../../utils/axiosInstance';
